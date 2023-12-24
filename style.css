@@ -1,0 +1,11 @@
+:root {
+    --font: "proxima-nova", sans-serif;
+    --dark-turq: rgb(51, 109, 121);
+    --turq: #1CA599;
+    --light-turq: #ABF5EC;
+    --orange: #FA8E5D;
+    --dark-orange: #F3672A;
+    --button-hover-transiton: all 200ms ease-in-out;
+    --button-border-radius: 30px;
+    --box-shadow: 10px 10px 20px rgba(51,109,121, 0.3);
+  }
