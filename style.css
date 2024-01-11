@@ -1,11 +1,175 @@
 :root {
-    --font: "proxima-nova", sans-serif;
-    --dark-turq: rgb(51, 109, 121);
-    --turq: #1CA599;
-    --light-turq: #ABF5EC;
-    --orange: #FA8E5D;
-    --dark-orange: #F3672A;
-    --button-hover-transiton: all 200ms ease-in-out;
-    --button-border-radius: 30px;
-    --box-shadow: 10px 10px 20px rgba(51,109,121, 0.3);
+  --beige: #e2d8c7;
+  --purple: #9596ab;
+  --blue: #425980;
+  --brown: #a67d73;
+  --font: "absoluteblondemedium", sans-serif;
+  --background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/110/211/original/topic-statue-of-liberty-gettyimages-960610006-feature.jpg?1705010620);
+}
+
+body {
+  font-family: var(--font);
+  color: var(--pink);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 10px;
+  text-align: center;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.menu-list {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.menu-item {
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 0;
+  transition: margin-bottom 0.2s ease-in-out;
+}
+
+.menu-item:hover {
+  /* font-size: 55px; */
+  margin-bottom: 5px;
+}
+
+/* slide sections */
+.page-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
+}
+
+/* #section1 {
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
+} */
+
+#section1 h1 {
+  margin: 0;
+  font-weight: normal;
+  text-align: center;
+  font-size: 100px;
+  /* transform: rotate(-10deg); */
+  color: white;
+}
+
+#section3 h1,
+#section3 h2,
+#section3 h3 {
+  font-weight: normal;
+}
+
+#section3 h1 {
+  font-size: 48px;
+}
+
+#section3 h2 {
+  font-size: 36px;
+  margin: 5px;
+}
+#section3 h3 {
+  font-size: 24px;
+  margin: 5px;
+}
+
+.grid-cast {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* .grid-cast-items .cast-image-ken {
+  background-image: var(--background-image);
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+} */
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
   }
+
+  .menu-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    background-color: var(--pink);
+    color: white;
+    transform: translateY(100%);
+    align-items: flex-start;
+  }
+
+  .menu-list.active {
+    display: flex;
+    transform: translateY(0);
+    align-items: center;
+  }
+
+  .menu-item {
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .menu-item:hover {
+    margin-bottom: 0;
+  }
+
+  .menu-item a {
+    color: white;
+  }
+}
