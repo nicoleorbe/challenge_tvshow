@@ -3,34 +3,27 @@
   --purple: #9596ab;
   --blue: #425980;
   --brown: #a67d73;
-  --font: "absoluteblondemedium", sans-serif;
+  --cursive-font: "Mrs Saint Delafield", cursive;
   --background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/110/211/original/topic-statue-of-liberty-gettyimages-960610006-feature.jpg?1705010620);
 }
 
 body {
   font-family: var(--font);
-  color: var(--pink);
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 }
 
-header {
-  padding: 10px;
-  text-align: center;
-}
-
-main {
-  flex: 1;
-  padding: 20px;
+h2 {
+  font-family: var(--cursive-font);
+  font-size: 48px;
 }
 
 .navbar {
   position: fixed;
   bottom: 0;
   left: 0;
-  /* width: 100%; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,11 +32,6 @@ main {
 .navbar a {
   color: white;
   text-decoration: none;
-}
-
-.navbar h1 {
-  margin: 0;
-  font-size: 1.5rem;
 }
 
 .menu-icon {
@@ -67,35 +55,25 @@ main {
 }
 
 .menu-item:hover {
-  /* font-size: 55px; */
   margin-bottom: 5px;
 }
 
 /* slide sections */
 .page-section {
   height: 100vh;
-  display: flex;
   justify-content: center;
   align-items: center;
   font-size: 3rem;
-
   background-image: var(--background-image);
   background-size: cover;
   background-position: center;
 }
-
-/* #section1 {
-  background-image: var(--background-image);
-  background-size: cover;
-  background-position: center;
-} */
 
 #section1 h1 {
   margin: 0;
   font-weight: normal;
   text-align: center;
   font-size: 100px;
-  /* transform: rotate(-10deg); */
   color: white;
 }
 
