@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Paytone+One&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -20,16 +20,14 @@
       </div>
     </div>
     <div class="page-section" id="section2">
-      <h1>history</h1>
+      <h2>Facts About Our Lady of Liberty</h2>
+      <div class="container-section2"></div>
     </div>
     <div class="page-section" id="section3">
-      <h1>Meet the Cast</h1>
+      <h2>Her History</h2>
     </div>
     <div class="page-section" id="section4">
-      <h1>Section 4</h1>
-    </div>
-    <div class="page-section" id="section5">
-      <h1>Section 5</h1>
+      <h2>Visit</h2>
     </div>
 
     <div class="navbar">
@@ -80,7 +78,7 @@
       }
       // slider navigation on scroll
       let currentPage = 1;
-      const totalSections = 5;
+      const totalSections = 4;
       let isScrolling = false;
 
       function showPage(pageNumber) {
@@ -115,15 +113,6 @@
           setTimeout(() => {
             isScrolling = false;
           }, 1000); // Set a time interval to prevent rapid scrolling
-        }
-      });
-
-      // Event listeners for slider navigation using arrow keys
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "ArrowLeft") {
-          navigateSlider(-1);
-        } else if (event.key === "ArrowRight") {
-          navigateSlider(1);
         }
       });
     </script>

@@ -3,6 +3,7 @@
   --purple: #9596ab;
   --blue: #425980;
   --brown: #a67d73;
+  --header-font: "Paytone One", sans-serif;
   --cursive-font: "Mrs Saint Delafield", cursive;
   --background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/110/211/original/topic-statue-of-liberty-gettyimages-960610006-feature.jpg?1705010620);
 }
@@ -15,19 +16,29 @@ body {
   flex-direction: column; */
 }
 
+h1 {
+  font-family: var(--header-font);
+  line-height: 1;
+  margin: 0;
+  font-weight: normal;
+  font-size: 90px;
+  color: white;
+}
+
 h2 {
-  font-family: var(--cursive-font);
-  font-size: 48px;
+  font-family: var(--header-font);
+  font-size: 60px;
+  color: white;
+  margin-top: 0;
 }
 
 .navbar {
   position: fixed;
+  width: 100%;
   bottom: 0;
-  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
 }
 .navbar a {
   color: white;
@@ -36,8 +47,9 @@ h2 {
 
 .menu-icon {
   display: none;
-  font-size: 1.5rem;
+  font-size: 3rem;
   cursor: pointer;
+  color: white;
 }
 
 .menu-list {
@@ -48,14 +60,14 @@ h2 {
 
 .menu-item {
   padding: 10px 20px;
+  font-family: var(--header-font);
   text-align: center;
-  font-size: 48px;
+  font-size: 40px;
   margin-bottom: 0;
-  transition: margin-bottom 0.2s ease-in-out;
 }
 
 .menu-item:hover {
-  margin-bottom: 5px;
+  text-decoration: underline white;
 }
 
 /* slide sections */
@@ -63,37 +75,15 @@ h2 {
   height: 100vh;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
+  text-align: center;
   background-image: var(--background-image);
   background-size: cover;
   background-position: center;
 }
 
-#section1 h1 {
-  margin: 0;
-  font-weight: normal;
-  text-align: center;
-  font-size: 100px;
-  color: white;
-}
-
-#section3 h1,
-#section3 h2,
-#section3 h3 {
-  font-weight: normal;
-}
-
-#section3 h1 {
-  font-size: 48px;
-}
-
-#section3 h2 {
-  font-size: 36px;
-  margin: 5px;
-}
-#section3 h3 {
-  font-size: 24px;
-  margin: 5px;
+#section1 h2 {
+  font-family: var(--cursive-font);
+  color: var(--blue);
 }
 
 .grid-cast {
@@ -121,12 +111,12 @@ h2 {
     display: none;
     flex-direction: column;
     position: absolute;
-    bottom: 60px;
+    bottom: 0px;
     left: 0;
     width: 100vw;
     height: 100vh;
     justify-content: center;
-    background-color: var(--pink);
+    background-color: var(--blue);
     color: white;
     transform: translateY(100%);
     align-items: flex-start;
