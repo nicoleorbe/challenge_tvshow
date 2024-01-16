@@ -3,7 +3,8 @@
   --purple: #9596ab;
   --blue: #425980;
   --brown: #a67d73;
-  --header-font: "Paytone One", sans-serif;
+  --yellow: #f2edbc;
+  --font: "Paytone One", sans-serif;
   --cursive-font: "Mrs Saint Delafield", cursive;
   --background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/110/211/original/topic-statue-of-liberty-gettyimages-960610006-feature.jpg?1705010620);
 }
@@ -17,7 +18,6 @@ body {
 }
 
 h1 {
-  font-family: var(--header-font);
   line-height: 1;
   margin: 0;
   font-weight: normal;
@@ -26,10 +26,15 @@ h1 {
 }
 
 h2 {
-  font-family: var(--header-font);
   font-size: 60px;
   color: white;
-  margin-top: 0;
+  margin: 0;
+}
+
+h3 {
+  font-size: 30px;
+  color: white;
+  margin: 0;
 }
 
 .navbar {
@@ -66,8 +71,8 @@ h2 {
   margin-bottom: 0;
 }
 
-.menu-item:hover {
-  text-decoration: underline white;
+.menu-item a:hover {
+  color: var(--yellow);
 }
 
 /* slide sections */
@@ -83,24 +88,30 @@ h2 {
 
 #section1 h2 {
   font-family: var(--cursive-font);
-  color: var(--blue);
+  color: var(--yellow);
+  font-size: 72px;
+  margin-bottom: -30px;
 }
 
-.grid-cast {
+.grid-facts {
   display: grid;
+  gap: 20px;
   align-content: center;
   justify-content: center;
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-/* .grid-cast-items .cast-image-ken {
-  background-image: var(--background-image);
-  background-size: cover;
+.grid-facts-items {
   width: 200px;
-  height: 200px;
+  font-size: 18px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  /* height: 200px; */
   border-radius: 10px;
-} */
+  background-color: var(--beige);
+  padding: 20px;
+}
 
 @media (max-width: 768px) {
   .menu-icon {
