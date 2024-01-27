@@ -3,30 +3,30 @@
   --purple: #9596ab;
   --blue: #425980;
   --brown: #a67d73;
-  --yellow: #f2edbc;
-  --font: "Paytone One", sans-serif;
-  --cursive-font: "Mrs Saint Delafield", cursive;
+  --yellow: #e29726;
+  --font: "hatch", serif;
   --background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/110/211/original/topic-statue-of-liberty-gettyimages-960610006-feature.jpg?1705010620);
+  --box-shadow: 10px 10px 20px rgba(0, 55, 142, 0.3);
 }
 
 body {
   font-family: var(--font);
   margin: 0;
   padding: 0;
-  /* display: flex;
-  flex-direction: column; */
 }
 
 h1 {
   line-height: 1;
   margin: 0;
-  font-weight: normal;
+  text-transform: uppercase;
+  font-weight: 500;
   font-size: 90px;
   color: white;
 }
 
 h2 {
-  font-size: 60px;
+  font-size: 40px;
+  text-transform: uppercase;
   color: white;
   margin: 0;
 }
@@ -52,9 +52,11 @@ h3 {
 
 .menu-icon {
   display: none;
-  font-size: 3rem;
   cursor: pointer;
   color: white;
+  font-size: 30px;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .menu-list {
@@ -65,9 +67,9 @@ h3 {
 
 .menu-item {
   padding: 10px 20px;
-  font-family: var(--header-font);
   text-align: center;
-  font-size: 40px;
+  font-size: 20px;
+  text-transform: capitalize;
   margin-bottom: 0;
 }
 
@@ -86,31 +88,81 @@ h3 {
   background-position: center;
 }
 
+#section1 {
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/111/383/original/yellowstone-fatherandson.jpg?1705763462);
+}
+
 #section1 h2 {
-  font-family: var(--cursive-font);
   color: var(--yellow);
   font-size: 72px;
   margin-bottom: -30px;
 }
 
-.grid-facts {
-  display: grid;
-  gap: 20px;
-  align-content: center;
-  justify-content: center;
-  justify-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
+#section2 {
+  /* padding-top: 10px; */
+  align-items: normal;
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/111/380/original/yellowstone-kevinmountain.png?1705762784);
 }
 
-.grid-facts-items {
-  width: 200px;
-  font-size: 18px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  /* height: 200px; */
-  border-radius: 10px;
-  background-color: var(--beige);
-  padding: 20px;
+#section2 h2 {
+  margin-top: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.grid-characters {
+  margin: 20px 40px;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.character {
+  border-radius: 6px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: var(--box-shadow);
+}
+
+.character:hover {
+  filter: brightness(108%) contrast(101%) grayscale(101%) saturate(101%);
+}
+
+.char-name,
+.actor {
+  display: block;
+  text-align: center;
+  margin: 0;
+}
+.char-name {
+  color: white;
+}
+.actor {
+  color: var(--yellow);
+}
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  .grid {
+    grid-gap: 10px;
+  }
+
+  .grid-characters {
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .character {
+    width: 130px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -150,5 +202,16 @@ h3 {
 
   .menu-item a {
     color: white;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-characters {
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .character {
+    width: 80px;
   }
 }
