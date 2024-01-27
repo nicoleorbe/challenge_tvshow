@@ -105,7 +105,8 @@ h3 {
 }
 
 #section2 h2 {
-  margin-top: 20px;
+  margin: 50px 0 40px;
+  font-size: 72px;
 }
 
 .grid {
@@ -142,6 +143,17 @@ h3 {
   color: var(--yellow);
 }
 
+@media (max-width: 1024px) {
+  .grid-characters {
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .character {
+    width: 200px;
+  }
+}
+
 @media (max-width: 900px) {
   h1 {
     font-size: 36px;
@@ -151,14 +163,19 @@ h3 {
     font-size: 24px;
   }
 
+  #section2 h2 {
+    margin: 30px 0 20px;
+    font-size: 36px;
+  }
+
   .grid {
     grid-gap: 10px;
   }
-
+  /* 
   .grid-characters {
     margin: 0 auto;
     grid-template-columns: repeat(4, 1fr);
-  }
+  } */
 
   .character {
     width: 130px;
